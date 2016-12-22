@@ -24,7 +24,7 @@ def Predicted_Covariance_Matrix(A,P,D):
 #1D (x)
 
 p_x  = 5 #initial value [position]
-sd_x = 1 #standard-deviation example 
+sd_x = 1 #variance example 
 
 A = matrix([[1.]])
 B = matrix([[0.]])
@@ -43,9 +43,9 @@ print("Example 1D- 1 variable\nPredicted State:" + str(Predicted_State_Matrix(A,
 dt     = 1    #time lapse 
 a      = -9.8 #acceleration
 p_y    = 20.  #initial value [position - y]
-sd_y   = 0.5  #standard-deviation[position - y]
+sd_y   = 0.5  #variance [position - y]
 v_y    = 0.   #initial value [velocity - y']
-sd_vy  = 0.1  #standard-deviation[velocity - y']
+sd_vy  = 0.1  #variance [velocity - y']
 
 A = matrix([[1.,dt],
             [0.,1.]])
@@ -75,9 +75,9 @@ print("Example 1D - Falling Ball (y /y')\nPredicted State:"  + str(Predicted_Sta
 dt   = 1    #time lapse 
 a    = 2    #acceleration
 p_x  = 50.  #initial value [position - x]
-sd_x = 0.5  #standard-deviation[position - x]
+sd_x = 0.5  #variance [position - x]
 v_x  = 5.   #initial value [velocity - x']
-sd_vx = 0.2 #standard-deviation[velocity - x']
+sd_vx = 0.2 #variance [velocity - x']
 
 A = matrix([[1.,dt],
             [0.,1.]]) # next state function
