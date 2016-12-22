@@ -1,6 +1,6 @@
 #******************************************************************
 # FILE: state_matrix_example.py
-# DESCRIPTION: This script presents three examples of state matrix
+# DESCRIPTION: This script presents three examples of prediction for state matrix
 # without iterations
 # VERSION: 0.0.1
 # AUTHOR: R.S. Pissardini
