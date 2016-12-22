@@ -25,11 +25,11 @@ estimated_error = previous_error = 2
 measure_error = 1
 initial_state = previous_state = 28
 
-measure = [32, 35, 33]
+measures = [32, 35, 33]
 
 # Loop
 
-for new_measure in measure:
+for new_measure in measures:
 
     k             = Kalman_Gain (previous_error, measure_error)
     current_state = Current_State (previous_state,k, new_measure)
