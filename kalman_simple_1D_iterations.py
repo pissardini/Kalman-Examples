@@ -11,11 +11,11 @@ def Kalman_Gain (error_est, error_meas):
     k = error_est/(error_est+ error_meas)
     return k
 
-def Current_State(state_prev, k, measure):
+def Current_State (state_prev, k, measure):
     state_curr = state_prev + k * (measure - state_prev)
     return state_curr
 
-def Current_Estimative(error_prev, k ):
+def Current_Estimative (error_prev, k ):
     error_curr = (1 - k) * error_prev
     return error_curr
 
@@ -29,8 +29,8 @@ measure = 32
 # 1st Iteration
  
 k             = Kalman_Gain (estimated_error, measure_error)
-current_state = Current_State(initial_state,k, measure)
-current_error = Current_Estimative(estimated_error, k )
+current_state = Current_State (initial_state,k, measure)
+current_error = Current_Estimative (estimated_error, k )
 
 print([round(k,2),round(current_state,2),round(current_error,2)])
 
@@ -41,8 +41,8 @@ previous_error = current_error
 new_measure = 35
 
 k             = Kalman_Gain (previous_error, measure_error)
-current_state = Current_State(previous_state,k, new_measure)
-current_error = Current_Estimative(previous_error, k )
+current_state = Current_State (previous_state,k, new_measure)
+current_error = Current_Estimative (previous_error, k )
 
 print([round(k,2),round(current_state,2),round(current_error,2)])
 
@@ -53,8 +53,8 @@ previous_error = current_error
 new_measure = 33
 
 k             = Kalman_Gain (previous_error, measure_error)
-current_state = Current_State(previous_state,k, new_measure)
-current_error = Current_Estimative(previous_error, k )
+current_state = Current_State (previous_state,k, new_measure)
+current_error = Current_Estimative (previous_error, k )
 
 print([round(k,2),round(current_state,2),round(current_error,2)])
 
