@@ -9,7 +9,7 @@
 
 from matrix import *
 
-def State_Matrix(A, B, x_prev, u, w):    
+def Predicted_State_Matrix(A, B, x_prev, u, w):    
     x_curr  = (A * x_prev)+ (B * u) + w
     return x_curr
 
@@ -25,12 +25,12 @@ x = matrix([[p_x]])
 u = matrix([[0]])
 w = matrix([[0]])
 
-print("Example 1 variable : " + str(State_Matrix(A, B, x, u, w)))
+print("Example 1 variable : " + str(Predicted_State_Matrix(A, B, x, u, w)))
 
 ## Falling Ball - 1 D (y /y')
 
 dt    = 1
-a     = -9.8
+a     = -9.81
 p_y   = 20.
 v_y   = 0. 
 
@@ -48,7 +48,7 @@ u = matrix([[a]])
 w = matrix([[0.],
             [0.]])
 
-print("Example 1D - Falling Ball (y /y'): "+ str(State_Matrix(A, B, x, u, w)))
+print("Example 1D - Falling Ball (y /y'): "+ str(Predicted_State_Matrix(A, B, x, u, w)))
 
 ## One-dimensional vehicle (x /x') -  1 D (x /x')
 
@@ -71,6 +71,6 @@ u = matrix([[a]])
 w = matrix([[0.],
             [0.]])
 
-print("Example 1D - One-dimensional vehicle (x /x'): " + str (State_Matrix(A, B, x,u, w)))
+print("Example 1D - One-dimensional vehicle (x /x'): " + str (Predicted_State_Matrix(A, B, x,u, w)))
 
 #end
