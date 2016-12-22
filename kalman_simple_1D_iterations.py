@@ -1,5 +1,5 @@
 #******************************************************************
-# FILE: kalman_1D_simple_iterations.py
+# FILE: kalman_simple_1D_iterations.py
 # DESCRIPTION: This program presents a simplified version of Kalman Filter
 # with iterations for instructive comprehension.
 # VERSION: 0.0.1
