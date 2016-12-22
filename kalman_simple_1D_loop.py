@@ -27,7 +27,7 @@ initial_state = previous_state = 28
 
 measure = [32, 35, 33]
 
-# 1st Iteration
+# Loop
 
 for new_measure in measure:
 
