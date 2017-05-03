@@ -1,2 +1,2 @@
 # Kalman-Examples
- A set of scripts for the use of Kalman Filter
+ A set of scripts using Kalman Filter
